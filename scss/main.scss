@@ -1,0 +1,53 @@
+// Colores
+$color-primario: pink;
+$color-bordes: pink; 
+$opacidad-media: 0.5;
+
+// Dimensiones
+$borde-imagenes: 3px;
+$borde-iconos: 110px;
+$padding-iconos: 10px;
+$tamanofuente-iconos: 4rem;
+
+// Imagen de Fondo
+$background-image-url: '../img/fondo.png';
+
+html::before {
+  background-image: url($background-image-url); 
+  background-size: cover;
+  background-attachment: fixed;
+  content: ' ';
+  opacity: $opacidad-media;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.img-border {
+  border: 1px solid $color-bordes !important;
+  border-radius: $borde-imagenes !important;
+}
+
+.iconos {
+  background-color: $color-primario;
+  border-radius: $borde-iconos;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: $padding-iconos;
+}
+
+.iconoscont {
+  font-size: $tamanofuente-iconos;
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import '../node_modules/@fortawesome/fontawesome-free/scss/solid.scss';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/brands.scss';
+@import '../node_modules/@fortawesome/fontawesome-free/scss/regular.scss';
